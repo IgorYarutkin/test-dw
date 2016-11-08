@@ -37,6 +37,7 @@ Thumbs.db
 .idea
 .svn
 bower_components
+tars-master
 
 # Node.JS
 node_modules
