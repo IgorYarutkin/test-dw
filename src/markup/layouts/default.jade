@@ -14,6 +14,7 @@ block vars
 doctype html
 html(lang='ru')
     include ../components/head/head
+        block head
 
     body
         +header()
@@ -21,5 +22,7 @@ html(lang='ru')
         block content
 
         +footer()
+
+        block modal
 
         script(src='%=static=%js/main%=hash=%%=min=%.js')
