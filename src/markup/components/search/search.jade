@@ -1,0 +1,6 @@
+mixin search(data)
+    +b.search()&attributes(attributes)
+        form(action="" method="post")
+            +e.inner
+                +e.INPUT.control(placeholder=search.input.placeholder)
+                != jadeHelpers.Icon.call(locals, {iconName: '2', className: 'search__icon-search'})

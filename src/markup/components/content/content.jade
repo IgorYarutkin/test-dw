@@ -1,0 +1,10 @@
+include ../search/search
+include ../menu/menu
+
+mixin content(data)
+    +b.content()&attributes(attributes)
+        +e.top
+            +e.IMG.logo(src="./static/img/general/logo.png" width="267" height="60" alt="logo TransAero")
+            +search()(class="content__search")
+            +menu()(class="content__menu")
+        +e.slider-box

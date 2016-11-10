@@ -1,0 +1,21 @@
+.menu {
+    padding-top: 10px;
+    &__list {
+        @include list-reset;
+        font-size: 0;
+        text-align: center;
+    }
+    &__item {
+        padding: 15px;
+        height: 60px;
+        display: inline-block;
+        font-size: 16px;
+    }
+    &__item_active {
+        color: $font-red;
+        border-top: 2px solid $border-red;
+        border-left: 1px solid $border-grey;
+        border-right: 1px solid $border-grey;
+        border-bottom: 1px solid #fff;
+    }
+}

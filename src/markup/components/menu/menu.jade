@@ -1,0 +1,5 @@
+mixin menu(data)
+    +b.menu()&attributes(attributes)
+        +e.UL.list
+            each item in menu.list
+                +e.LI.item(id=item.id class=item.active?'menu__item_active':'') #{item.name}

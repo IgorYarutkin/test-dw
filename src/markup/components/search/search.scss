@@ -1,0 +1,22 @@
+.search {
+    padding-top: 20px;
+    &__inner {
+        position: relative;
+        width: 100%;
+    }
+    &__control {
+        padding: 0 25px 0 10px;
+        width: 100%;
+        height: 30px;
+        border: 1px solid $border-grey;
+        &[placeholder] {
+            color: $font-grey;
+            text-transform: lowercase;
+        }
+    }
+    &__icon-search {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+    }
+}
