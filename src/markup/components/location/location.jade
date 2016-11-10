@@ -1,0 +1,10 @@
+mixin location(data)
+    +b.location()&attributes(attributes)
+        - each item in location.sites
+            if item.active
+                +e.site._active
+                    +e.SPAN.site-name #{item.country + ': '}
+                    +e.A.translate(href=jv0) Switch to English
+            else
+                +e.site
+                    +e.A.site-name(href=jv0) #{item.country}

@@ -1,0 +1,13 @@
+.location {
+    float: left;
+    &__site {
+        margin-right: 28px;
+        display: inline-block;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__site_active &__site-name {
+        color: #000;
+    }
+}

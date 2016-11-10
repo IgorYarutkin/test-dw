@@ -1,3 +1,8 @@
-mixin header(data) 
-    +b.header()&attributes(attributes) 
-        block
+include ../location/location
+include ../user-block/user-block
+
+mixin header(data)
+    +b.header()&attributes(attributes)
+        +e.wrapper
+            +location(location.sites)
+            +user-block()

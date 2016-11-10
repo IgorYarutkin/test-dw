@@ -1,0 +1,6 @@
+mixin user-block(data)
+    +b.user-block()&attributes(attributes)
+        +e.A.board(href="jv0")
+            != jadeHelpers.Icon.call(locals, {iconName: '1', className: 'user-block__icon-board'})
+            | Онлайн-табло
+        +e.A.login(href="jv0") Вход и регистрация
