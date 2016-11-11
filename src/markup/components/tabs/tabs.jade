@@ -1,0 +1,13 @@
+include ../search/search
+include ../slider/slider
+
+mixin tabs(data)
+    +b.tabs()&attributes(attributes)
+        +e.top
+            +e.IMG.logo(src="./static/img/general/logo.png" width="267" height="60" alt="logo TransAero")
+            +search()(class='tabs__search')
+            +e.control
+                each item in tabs.list
+                    +e.title(id=item.id class=item.active?'tabs__title_active':'') #{item.title}
+        +e.viewbox
+            +slider()(class="tabs__content")

@@ -1,0 +1,47 @@
+.tabs {
+    &__top {
+        margin: 0 auto;
+        padding: 10px 70px 0;
+        max-width: 1100px;
+    }
+    &__logo {
+        float: left;
+    }
+    &__search {
+        float: right;
+        width: 250px;
+        & .search__control {
+            color: #000;
+        }
+    }
+    &__control {
+        padding-top: 10px;
+        font-size: 0;
+        text-align: center;
+        overflow: hidden;
+    }
+    &__title {
+        padding: 15px;
+        display: inline-block;
+        height: 60px;
+        font-size: 16px;
+        cursor: pointer;
+        &_active {
+            color: $font-red;
+            border-top: 2px solid $border-red;
+            border-left: 1px solid $border-grey;
+            border-right: 1px solid $border-grey;
+            border-bottom: 1px solid #fff;
+            cursor: default;
+        }
+    }
+    &__viewbox {
+        margin-top: -3px;
+        padding: 30px 0 80px;
+        border-top: 1px solid $border-grey;
+    }
+    &__slider {
+        margin: 0 auto;
+        max-width: 1100px;
+    }
+}
