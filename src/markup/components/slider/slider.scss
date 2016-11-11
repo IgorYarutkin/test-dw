@@ -1,0 +1,66 @@
+.slider {
+    &__item {
+        padding-top: 39%;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+    }
+    &__icon-arrow-left {
+        position: absolute;
+        top: 40%;
+        left: 70px;
+        @include bg($arrow-left);
+        cursor: pointer;
+        &:hover {
+            @include bg($arrow-left-hover);
+        }
+        &:active {
+            @include bg($arrow-left-red);
+        }
+    }
+    &__icon-arrow-right {
+        position: absolute;
+        top: 40%;
+        right: 20px;
+        width: 35px;
+        height: 64px;
+        @include bg($arrow-right);
+        cursor: pointer;
+        &:hover {
+            @include bg($arrow-right-hover);
+        }
+        &:active {
+            @include bg($arrow-right-red);
+        }
+    }
+    &__description {
+        position: absolute;
+        bottom: 60px;
+        left: 150px;
+        width: 755px;
+        color: #fff;
+    }
+    &__text {
+        display: block;
+        font-family: $fontHelThin;
+        font-size: 280%;
+    }
+    &__title {
+        position: relative;
+        font-family: $fontHelLight;
+        font-size: 475%;
+        line-height: 65px;
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: -30px;
+            @include bg($icon-plane);
+        }
+    }
+    &__note {
+        display: block;
+        font-family: $fontHelLight;
+        font-size: 14px;
+    }
+}
