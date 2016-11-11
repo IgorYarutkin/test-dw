@@ -1,13 +1,25 @@
 .user-block {
-    position: relative;
-    float: right;
+    text-align: center;
+    @include above(640px) {
+        float: right;
+        text-align: right;
+    }
     &__board {
+        position: relative;
         margin-right: 40px;
         padding-left: 30px;
+        &:hover {
+            color: rgba($font-blue, .5);
+        }
     }
     &__icon-board {
         position: absolute;
         top: -2px;
         left: 0;
+    }
+    &__login {
+        &:hover {
+            color: rgba($font-blue, .5);
+        }
     }
 }

@@ -8,6 +8,7 @@ mixin tabs(data)
             +search()(class='tabs__search')
             +e.control
                 each item in tabs.list
-                    +e.title(id=item.id class=item.active?'tabs__title_active':'') #{item.title}
+                    +e.A.link(href="jav0" id=item.id)
+                        +e.SPAN.title(class=item.active?'tabs__title_active':'') #{item.title}
         +e.viewbox
             +slider()(class="tabs__content")

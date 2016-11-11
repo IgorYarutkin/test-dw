@@ -1,11 +1,18 @@
 .header {
     background-color: $bg-grey;
+    min-width: 320px;
     &__wrapper {
-        @include clearfix;
         margin: 0 auto;
-        padding: 10px 120px 15px 70px;
+        padding: 10px 20px 15px;
         max-width: 1100px;
         color: $font-blue;
         font-size: 12px;
+        @include above(640px) {
+            padding: 10px 30px 15px;
+            @include clearfix;
+        }
+        @include above(840px) {
+            padding: 10px 120px 15px 70px;
+        }
     }
 }

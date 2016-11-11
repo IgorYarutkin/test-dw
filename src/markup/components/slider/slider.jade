@@ -1,9 +1,9 @@
 mixin slider(data)
     +b.slider()&attributes(attributes)
+        +e.icon-arrow-left
+        +e.icon-arrow-right
         each item in slider.list
             +e.item(style="background-image:url('#{item.src}')")
-                +e.icon-arrow-left
-                +e.icon-arrow-right
                 +e.P.description
                     +e.SPAN.text #{item.text}
                     +e.SPAN.title #{item.title}
