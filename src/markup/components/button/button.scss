@@ -1,0 +1,10 @@
+.button {
+    display: block;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: $bg-grey;
+    border-radius: 5px;
+    &:hover {
+        background-color: $cross-grey;
+    }
+}
