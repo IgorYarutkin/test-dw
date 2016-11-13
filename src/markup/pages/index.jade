@@ -1,5 +1,5 @@
 extends ../layouts/default
-include ../components/tabs/tabs
+include ../components/box/box
 include ../components/modal-login/modal-login
 include ../components/modal-overlay/modal-overlay
 
@@ -10,7 +10,7 @@ block head
     link(href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet")
 
 block content
-    +tabs()
+    +box()
 
 block modal
     +modal-login()
