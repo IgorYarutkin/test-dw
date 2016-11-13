@@ -2,8 +2,13 @@
     position: relative;
     &__item {
         padding-top: 39%;
+        display: none;
         background-repeat: no-repeat;
         background-size: 100% auto;
+        background-color: #888;
+        &_active {
+            display: block;
+        }
     }
     &__icon-arrow-left {
         position: absolute;
