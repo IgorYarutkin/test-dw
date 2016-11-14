@@ -1,0 +1,11 @@
+mixin slider(param, idTab)
+    +b.slider()&attributes(attributes)
+        +e.icon-arrow-left
+        +e.icon-arrow-right
+        each item, index in param
+            +e.item(id="#{idTab}-#{index}" class=item.active?'slider__item_active':''  style="background-image:url('#{item.src}')")
+                +e.P.description
+                    +e.SPAN.text #{item.text}
+                    +e.SPAN.title #{item.title}
+                    +e.SPAN.note #{item.note}
+                    +e.icon-plane

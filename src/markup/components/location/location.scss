@@ -1,10 +1,18 @@
 .location {
-    float: left;
+    text-align: center;
+    @include above(640px) {
+        margin: 0;
+        float: left;
+        text-align: left;
+    }
     &__site {
-        margin-right: 28px;
+        margin: 0 28px 10px 0;
         display: inline-block;
         &:last-child {
             margin-right: 0;
+        }
+        &:hover {
+            color: rgba($font-blue, .5);
         }
     }
     &__site_active &__site-name {

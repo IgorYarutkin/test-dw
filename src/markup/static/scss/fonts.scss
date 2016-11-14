@@ -7,3 +7,6 @@
 // Var for using custom font
 $font-1: 'Open Sans', Helvetica, Arial, sans-serif;
 */
+
+@include font-face('HeliousLightC', '../fonts/helioslightc', normal, $exts: otf);
+@include font-face('HeliousThinC', '../fonts/heliosthinc', normal, $exts: otf);

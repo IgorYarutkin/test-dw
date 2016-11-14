@@ -1,0 +1,16 @@
+include ../input/input
+include ../button/button
+
+mixin modal-login(data)
+    +b.modal-login()&attributes(attributes)
+        form.form(action="jav0" method="post")
+            +e.input
+                +input(modalLogin.login)
+                +e.A.note(href=modalLogin.login.registrationLink)
+                    | #{modalLogin.login.registrationLabel}
+            +e.input
+                +input(modalLogin.password)
+                +e.A.note(href=modalLogin.password.recoveryPasswordLink)
+                    | #{modalLogin.password.recoveryPasswordLabel}
+            +button(modalLogin.submit)(class="modal-login__submit")
+            +e.btn-close

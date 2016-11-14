@@ -1,0 +1,19 @@
+include ../search/search
+include ../slider/slider
+
+mixin tabs(data)
+    +b.tabs()&attributes(attributes)
+        +e.top
+            +e.IMG.logo(src="./static/img/general/logo.png" width="267" height="60" alt="logo TransAero")
+            +search()(class='tabs__search')
+            +e.control
+                each item in tabs.list
+                    +e.A.link(href=item.href id=item.id)
+                        +e.SPAN.title(class=item.active?'tabs__title_active':'') #{item.title}
+        +e.viewbox
+            +e.content(id=tabs.opportunity.id + '-content' class=tabs.opportunity.active?'tabs__content_active':'')
+                +slider(tabs.slides.content.opportunity, id=tabs.opportunity.id)
+            +e.content(id=tabs.info.id + '-content' class=tabs.info.active?'tabs__content_active':'')
+                +slider(tabs.slides.content.info, id=tabs.info.id)
+            +e.content(id=tabs.privilege.id + '-content' class=tabs.privilege.active?'tabs__content_active':'')
+                +slider(tabs.slides.content.privilege, id=tabs.privilege.id)

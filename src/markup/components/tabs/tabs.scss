@@ -1,0 +1,81 @@
+.tabs {
+    min-width: 320px;
+    &__top {
+        margin: 0 auto;
+        padding: 10px 20px 0;
+        max-width: 1100px;
+        @include above(840px) {
+            padding: 10px 70px 0;
+        }
+    }
+    &__logo {
+        margin: 0 auto;
+        display: block;
+        @include above(640px) {
+            margin: 0;
+            display: inline-block;
+            float: left;
+        }
+    }
+    &__search {
+        width: 100%;
+        @include above(640px){
+            float: right;
+            width: 250px;
+        }
+        & .search__control {
+            color: #000;
+        }
+    }
+    &__control {
+        padding-top: 10px;
+        font-size: 0;
+        text-align: center;
+        overflow: hidden;
+        @include above(640px) {
+            clear: both;
+        }
+        @include above(1020px) {
+            clear: none;
+        }
+    }
+    &__title {
+        display: inline-block;
+        padding: 15px;
+        height: 60px;
+        font-size: 16px;
+        cursor: pointer;
+        @include between(320px, 499px) {
+            display: none;
+        }
+        &:hover {
+            color: rgba(0, 0, 0, .5);
+        }
+        &_active {
+            color: $font-red;
+            border-top: 2px solid $border-red;
+            border-left: 1px solid $border-grey;
+            border-right: 1px solid $border-grey;
+            border-bottom: 1px solid #fff;
+            cursor: default;
+            &:hover {
+                color: $font-red;
+            }
+        }
+
+    }
+    &__viewbox {
+        margin-top: -3px;
+        padding: 30px 0 80px;
+        border-top: 1px solid $border-grey;
+    }
+    &__content {
+        display: none;
+        margin: 0 auto;
+        min-width: 320px;
+        max-width: 1100px;
+        &_active {
+            display: block;
+        }
+    }
+}

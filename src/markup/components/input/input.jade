@@ -1,0 +1,4 @@
+mixin input(data)
+    +b.input()&attributes(attributes)
+        +e.LABEL.label= data.label
+            +e.INPUT.control(name=data.name type=data.type?data.type:'text' placeholder=data.placeholder reguired=data.reguired )

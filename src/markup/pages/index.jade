@@ -1,4 +1,5 @@
 extends ../layouts/default
+include ../components/box/box
 include ../components/modal-login/modal-login
 include ../components/modal-overlay/modal-overlay
 
@@ -9,7 +10,7 @@ block head
     link(href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet")
 
 block content
-    // Контент здесь
+    +box()
 
 block modal
     +modal-login()
