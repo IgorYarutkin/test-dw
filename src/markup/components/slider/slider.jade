@@ -1,7 +1,7 @@
 mixin slider(param, idTab)
     +b.slider()&attributes(attributes)
-        +e.icon-arrow-left
-        +e.icon-arrow-right
+        +e.icon-arrow-left(data-change="down")
+        +e.icon-arrow-right(data-change="up")
         each item, index in param
             +e.item(id="#{idTab}-#{index}" class=item.active?'slider__item_active':''  style="background-image:url('#{item.src}')")
                 +e.P.description
