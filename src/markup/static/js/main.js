@@ -11,6 +11,8 @@ $(() => {
 
 const tabs = require('components/tabs/tabs');
 const slider = require('components/slider/slider');
+const userBLock = require('components/user-block/user-block.js');
 
+userBLock();
 tabs();
 slider();
