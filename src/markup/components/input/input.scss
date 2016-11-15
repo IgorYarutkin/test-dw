@@ -13,11 +13,21 @@
         padding-left: 5px;
         display: inline-block;
         width: 100%;
-        &_not-valid {
-            border: 2px solid $border-red;
-        }
+        border: 2px solid $border-red;
         &_valid {
             border: 2px solid $border-green;
+            :focus {
+                border: 2px solid $border-green;
+            }
+        }
+        &_empty {
+            border-color: $border-grey;
+            &:hover {
+                border-color: #777;
+            }
+            &:focus {
+                border: 2px solid $font-blue;
+            }
         }
     }
 }
